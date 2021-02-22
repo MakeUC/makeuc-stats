@@ -73,13 +73,13 @@ export function UniversityStat() {
     </div>
   </div>;
 }
-export function StatesStat() {
-  const { stats: { stateCount } } = useStats();
+export function CountryStats() {
+  const { stats: { countryCount } } = useStats();
 
   return <div className="card">
     <div className="card-body">
       <h4 className="card-title">
-        <CountUp delay={2} end={stateCount} /> <small>states represented</small>
+        <CountUp delay={2} end={countryCount} /> <small>countries represented</small>
       </h4>
     </div>
   </div>;

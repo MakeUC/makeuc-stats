@@ -8,6 +8,7 @@ const {
   getEducationLevels,
   getFemalesPercent,
   getUniversityCount,
+  getCountryCount,
   getStateCount
 } = require('./stats');
 
@@ -25,6 +26,7 @@ app.get(`/stats`, async (req, res) => {
       educationLevels: getEducationLevels(registrants),
       femalesPercent: getFemalesPercent(registrants),
       universityCount: getUniversityCount(registrants),
+      countryCount: getCountryCount(registrants),
       stateCount: await getStateCount(registrants)
     };
 

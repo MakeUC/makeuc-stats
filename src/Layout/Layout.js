@@ -6,7 +6,7 @@ import {
   EducationLevelChart,
   FemalesStat,
   UniversityStat,
-  StatesStat
+  CountryStats
 } from '../Stats/Stats';
 import { Footer } from './Footer';
 import { Navbar } from './Navbar';
@@ -42,7 +42,7 @@ export function Layout() {
               <UniversityStat />
             </div>
             <div className="col-md-4 mb-4">
-              <StatesStat />
+              <CountryStats />
             </div>
           </div>
         </>

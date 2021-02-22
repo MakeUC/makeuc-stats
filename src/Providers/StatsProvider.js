@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-const defaultStats = { count: 0, ethnicities: {}, educationLevels: {}, femalesPercent: 0, universityCount: 0 };
+const defaultStats = { count: 0, ethnicities: {}, educationLevels: {}, femalesPercent: 0, universityCount: 0, countryCount: 0 };
 
 const context = createContext({ stats: defaultStats, isLoading: true, error: null });
 

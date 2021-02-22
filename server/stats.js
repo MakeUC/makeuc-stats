@@ -66,6 +66,13 @@ exports.getUniversityCount = attendees => {
   return universityCount.length;
 };
 
+exports.getCountryCount = attendees => {
+  const countryCount = [...new Set(
+    attendees.map(a => a.country)
+  )];
+  return countryCount.length;
+};
+
 exports.getStateCount = async attendees => {
   const schoolToState = await fetchStateData();
   const stateCount = [...new Set(

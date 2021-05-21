@@ -1,11 +1,3 @@
-const axios = require('axios').default;
+const data = require('./data.json');
 
-exports.fetchData = async () => {
-  const token = process.env.API_TOKEN;
-  const res = await axios.get(`https://revolutionuc-api.herokuapp.com/api/v2/admin/registrants?page=1&limit=5000&full=true`, {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  });
-  return res.data.items;
-};
+exports.fetchData = () => data.filter(d => d.isVerified === `TRUE`);

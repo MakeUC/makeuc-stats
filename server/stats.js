@@ -13,29 +13,15 @@ const fetchStateData = async () => {
 
 exports.fetchRegistrantData = async (checkedIn = !SHOW_REGISTRANT_DATA) => {
   const registrants = await fetchData();
-  return checkedIn ? registrants.filter(r => r.checkedIn) : registrants;
-};
-
-const processEths = (ethnicities, ethnicity) => {
-  let eth = ethnicity;
-  if(ethnicity === `Indian`) {
-    eth = `American Indian`;
-  }
-  if (ethnicities[eth]) {
-    ethnicities[eth]++;
-  } else {
-    ethnicities[eth] = 1;
-  }
+  return checkedIn ? registrants.filter(r => r.isCheckedIn) : registrants;
 };
 
 exports.getEthnicities = attendees => {
   return attendees.reduce((ethnicities, reg) => {
-    if(Array.isArray(reg.ethnicity)) {
-      reg.ethnicity.forEach(ethnicity => {
-        processEths(ethnicities, ethnicity);
-      });
+    if (ethnicities[reg.ethnicity]) {
+      ethnicities[reg.ethnicity]++;
     } else {
-      processEths(ethnicities, reg.ethnicity);
+      ethnicities[reg.ethnicity] = 1;
     }
     return ethnicities;
   }, {});
@@ -43,10 +29,10 @@ exports.getEthnicities = attendees => {
 
 exports.getEducationLevels = attendees => {
   return attendees.reduce((educationLevels, reg) => {
-    if (educationLevels[reg.educationLevel]) {
-      educationLevels[reg.educationLevel]++;
+    if (educationLevels[reg.degree]) {
+      educationLevels[reg.degree]++;
     } else {
-      educationLevels[reg.educationLevel] = 1;
+      educationLevels[reg.degree] = 1;
     }
     return educationLevels;
   }, {});

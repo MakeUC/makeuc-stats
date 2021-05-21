@@ -7,7 +7,7 @@ import { buildRaceChart, buildEducationLevelChart } from './charts';
 export function TotalNum() {
   const { stats: { count } } = useStats();
   return <h2 className="text-left">
-    Total participants: <CountUp end={count} />
+    Total registrants: <CountUp end={count} />
   </h2>;
 }
 export function RaceChart() {

@@ -10,7 +10,7 @@ export function Navbar() {
       <div>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <a className="nav-link" href="https://revolutionuc.com/">Main website</a>
+            <a className="nav-link" href="https://makeuc.io/">Main website</a>
           </li>
         </ul>
       </div>

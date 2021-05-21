@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+
+
+.navbar-brand img {
+  width: 120px;
+  height: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nes-container.main-container {
+  margin: 5rem 3rem 3rem 3rem;
+  padding: 3rem 10rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nes-container.is-dark {
+  background-color: black;
+}
+
+.nes-container.is-dark.with-title>.title {
+  background-color: black;
+  margin-top: -4.2rem;
+  font-size: 1.5rem;
+}
+
+.nes-container.stats-container {
+  padding: 3rem 4rem 1rem 4rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .nes-container.main-container {
+    margin: 5rem 1rem 1rem 1rem;
+    padding: 1rem 5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-primary-new {
+  background-color: #ff3f00;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary-new {
+  background-color: #ff3f00;
+  color: #fccf00;
+  border-color: #3b1f86;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary-new:hover {
+  background-color: #ff1c26;
+  color: #f8cd00;
 }

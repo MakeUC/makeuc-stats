@@ -5,7 +5,7 @@ Chart.defaults.global.defaultFontFamily = `'Lato', -apple-system, BlinkMacSystem
 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'`;
 
 const backgroundColor = [
-  `rgb(212, 197, 247)`, `rgb(97, 207, 255)`, `rgb(0, 220, 201)`, `rgb(166, 128, 140)`, `rgb(250, 223, 200)`, `rgb(192, 173, 164)`
+  `#ff1c26`, `#3b1f86`, `#ff3f00`, `#f8cd00`, `#ff36ab`, `#92cc41`
 ];
 
 export function buildRaceChart(ctx, ethnicities) {
@@ -26,7 +26,6 @@ export function buildRaceChart(ctx, ethnicities) {
       plugins: {
         labels: {
           render: a => `${a.label}: ${a.percentage}%`,
-          fontSize: 16,
           fontColor: `black`,
           showActualPercentages: true,
           position: `border`,
@@ -52,7 +51,6 @@ export function buildEducationLevelChart(ctx, educationLevels) {
       plugins: {
         labels: {
           render: a => `${a.label}: ${a.percentage}%`,
-          fontSize: 16,
           fontColor: `black`,
           overlap: false
         }

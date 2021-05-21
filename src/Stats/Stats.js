@@ -10,7 +10,6 @@ export function TotalNum() {
     Total participants: <CountUp end={count} />
   </h2>;
 }
-
 export function RaceChart() {
   const { stats: { ethnicities } } = useStats();
   const { download } = useDownloadCanvas();
@@ -21,15 +20,15 @@ export function RaceChart() {
     buildRaceChart(ctx, ethnicities);
   }, [ id, ethnicities ]);
 
-  return <>
-    <h4>Ethnicities</h4>
-    <canvas id={id} width="400" height="400" />
+  return <div className="nes-container with-title is-dark is-centered stats-container">
+    <p class="title">Ethnicities</p>
+    <canvas id={id} width="200" height="200" />
     <button
       type="button"
-      className="btn btn-primary-new btn-sm"
+      className="nes-btn btn-primary-new mt-2"
       onClick={() => download(id, `RevolutionUC 2020 Ethnicity Chart`)}
     >Download</button>
-  </>;
+  </div>;
 }
 export function EducationLevelChart() {
   const { stats: { educationLevels } } = useStats();
@@ -41,46 +40,40 @@ export function EducationLevelChart() {
     buildEducationLevelChart(ctx, educationLevels);
   }, [ id, educationLevels ]);
 
-  return <>
-    <h4>Education Levels</h4>
-    <canvas id={id} width="400" height="400" />
+  return <div className="nes-container with-title is-dark is-centered stats-container">
+    <p class="title">Education Levels</p>
+    <canvas id={id} width="200" height="200" />
     <button
       type="button"
-      className="btn btn-primary-new btn-sm"
+      className="nes-btn btn-primary-new mt-2"
       onClick={() => download(id, `RevolutionUC 2020 Education Level Chart`)}
     >Download</button>
-  </>;
+  </div>;
 }
 export function FemalesStat() {
   const { stats: { femalesPercent } } = useStats();
 
-  return <div className="card">
-    <div className="card-body">
-      <h4 className="card-title">
-        <CountUp delay={2} decimals={2} end={femalesPercent} />% <small>female attendance</small>
-      </h4>
-    </div>
+  return <div className="nes-container is-dark">
+    <h4 className="card-title">
+      <CountUp delay={2} decimals={2} end={femalesPercent} />% <small>female attendance</small>
+    </h4>
   </div>;
 }
 export function UniversityStat() {
   const { stats: { universityCount } } = useStats();
 
-  return <div className="card">
-    <div className="card-body">
-      <h4 className="card-title">
-        <CountUp delay={2} end={universityCount} /> <small>schools represented</small>
-      </h4>
-    </div>
+  return <div className="nes-container is-dark">
+    <h4 className="card-title">
+      <CountUp delay={2} end={universityCount} /> <small>schools represented</small>
+    </h4>
   </div>;
 }
 export function CountryStats() {
   const { stats: { countryCount } } = useStats();
 
-  return <div className="card">
-    <div className="card-body">
-      <h4 className="card-title">
-        <CountUp delay={2} end={countryCount} /> <small>countries represented</small>
-      </h4>
-    </div>
+  return <div className="nes-container is-dark">
+    <h4 className="card-title">
+      <CountUp delay={2} end={countryCount} /> <small>countries represented</small>
+    </h4>
   </div>;
 }

@@ -14,7 +14,7 @@ export function StatsProvider({ children }) {
     (async function() {
       const env = process.env.NODE_ENV;
 
-      const serverUrl = (env === `development`) ? `http://localhost:3000` : ``;
+      const serverUrl = (env === `development`) ? `http://localhost:2000` : ``;
 
       try {
         const res = await axios({

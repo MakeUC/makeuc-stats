@@ -38,6 +38,6 @@ app.get(`/stats`, async (req, res) => {
 });
 
 const env = process.env.NODE_ENV;
-const port = (env === `development`) ? 2000 : 2000;
+const port = (env === `development`) ? 2000 : process.env.PORT;
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

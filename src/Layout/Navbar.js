@@ -4,7 +4,7 @@ export function Navbar() {
   return <nav className="navbar navbar-expand-lg navbar-dark bg-primary-new fixed-top">
     <div className="container">
       <a className="navbar-brand" href="/">
-        <img src="/logo.png" alt="RevolutionUC" className="mr-3" />
+        <img src="/logo.png" alt="MakeUC" className="mr-3" />
         MakeUC Stats
       </a>
       <div>

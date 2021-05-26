@@ -26,7 +26,7 @@ export function RaceChart() {
     <button
       type="button"
       className="nes-btn btn-primary-new mt-2"
-      onClick={() => download(id, `RevolutionUC 2020 Ethnicity Chart`)}
+      onClick={() => download(id, `MakeUC 2020 Ethnicity Chart`)}
     >Download</button>
   </div>;
 }
@@ -46,7 +46,7 @@ export function EducationLevelChart() {
     <button
       type="button"
       className="nes-btn btn-primary-new mt-2"
-      onClick={() => download(id, `RevolutionUC 2020 Education Level Chart`)}
+      onClick={() => download(id, `MakeUC 2020 Education Level Chart`)}
     >Download</button>
   </div>;
 }

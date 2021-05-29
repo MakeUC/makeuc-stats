@@ -10,7 +10,7 @@ const {
   getCountryCount,
   getStateCount
 } = require('./stats');
-const { fetchData } = require('./data');
+const data = require('./data.json');
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, `../build`)));
 
 app.get(`/stats`, async (req, res) => {
   try {
-    const registrants = fetchData();
+    const registrants = data;
     const stats = {
       count: registrants.length,
       ethnicities: getEthnicities(registrants),

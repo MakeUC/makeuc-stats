@@ -13,6 +13,7 @@ export function StatsProvider({ children }) {
   useEffect(() => {
     (async function() {
       const env = process.env.NODE_ENV;
+      console.log("🚀 ~ file: StatsProvider.js ~ line 16 ~ env", env)
 
       const serverUrl = (env === `development`) ? `http://localhost:2000` : ``;
 

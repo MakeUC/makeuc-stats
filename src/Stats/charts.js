@@ -5,7 +5,7 @@ Chart.defaults.global.defaultFontFamily = `'Lato', -apple-system, BlinkMacSystem
 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'`;
 
 const backgroundColor = [
-  `#ff1c26`, `#3b1f86`, `#2121de`, `#f8cd00`, `#ff36ab`, `#92cc41`, `#209cee`
+  `#ff8304`, `#3b1f86`, `#2121de`, `#f8cd00`, `#ff36ab`, `#92cc41`, `#209cee`
 ];
 
 export function buildRaceChart(ctx, ethnicities) {

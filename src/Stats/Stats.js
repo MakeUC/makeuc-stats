@@ -62,9 +62,12 @@ export function FemalesStat() {
 export function UniversityStat() {
   const { stats: { universityCount } } = useStats();
 
+  // this isn't hackish at all
   return <div className="nes-container is-dark">
     <h4 className="card-title">
-      <CountUp delay={2} end={universityCount} /> <small>schools represented</small>
+      <CountUp delay={2} end={universityCount}/> <small>schools</small>
+      <br></br>
+      <small>represented</small>
     </h4>
   </div>;
 }
@@ -73,7 +76,7 @@ export function CountryStats() {
 
   return <div className="nes-container is-dark">
     <h4 className="card-title">
-      <CountUp delay={2} end={countryCount} /> <small>countries represented</small>
+      <CountUp delay={2} end={countryCount}/> <small>countries represented</small>
     </h4>
   </div>;
 }

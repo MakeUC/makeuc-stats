@@ -3,7 +3,6 @@ const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const {
-  fetchRegistrantData,
   getEthnicities,
   getEducationLevels,
   getFemalesPercent,
@@ -11,6 +10,7 @@ const {
   getCountryCount,
   getStateCount
 } = require('./stats');
+const { fetchData } = require('./data');
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, `../build`)));
 
 app.get(`/stats`, async (req, res) => {
   try {
-    const registrants = await fetchRegistrantData();
+    const registrants = fetchData();
     const stats = {
       count: registrants.length,
       ethnicities: getEthnicities(registrants),

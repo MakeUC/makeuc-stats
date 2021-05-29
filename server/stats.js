@@ -1,19 +1,11 @@
 const fs = require('fs');
 const util = require('util');
 const path = require('path');
-const { fetchData } = require('./data');
-
-const SHOW_REGISTRANT_DATA = process.env.SHOW_REGISTRANT_DATA === `true`;
 
 const fetchStateData = async () => {
   const fileBuffer = await util.promisify(fs.readFile)(path.join(__dirname, `./school-to-state.json`));
   const fileString = fileBuffer.toString();
   return JSON.parse(fileString);
-};
-
-exports.fetchRegistrantData = async (checkedIn = !SHOW_REGISTRANT_DATA) => {
-  const registrants = await fetchData();
-  return checkedIn ? registrants.filter(r => r.isCheckedIn) : registrants;
 };
 
 exports.getEthnicities = attendees => {

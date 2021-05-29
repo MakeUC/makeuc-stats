@@ -25,10 +25,20 @@
   margin-top: 2rem;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 992px) {
   .nes-container.main-container {
     margin: 5rem 1rem 1rem 1rem;
     padding: 1rem 5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  * {
+    font-size: 0.6em;
+  }
+  .nes-container.main-container {
+    margin: 3rem 1rem 1rem 1rem;
+    padding: 1rem;
   }
 }
 

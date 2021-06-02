@@ -1,5 +1,8 @@
 import React from 'react';
 import { useStats } from '../Providers/StatsProvider';
+
+import '../App.css';
+
 import {
   TotalNum,
   RaceChart,
@@ -44,6 +47,10 @@ export function Layout() {
             <div className="col-lg-4 col-md-12 mb-4">
               <CountryStats />
             </div>
+          </div>
+
+          <div className="row text-center">
+              <a href="https://makeuc-2020.devpost.com/" className="nes-btn btn-primary-new mt-2 devpost-btn" style={{margin: '0 auto'}}>PAST PROJECTS </a>
           </div>
         </>
       }

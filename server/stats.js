@@ -33,7 +33,8 @@ exports.getEducationLevels = attendees => {
 exports.getFemalesPercent = attendees => {
   const femaleCount = attendees.filter(a => a.gender === `Female`).length;
   const totalCount = attendees.length;
-  const femalePercentage = (femaleCount / totalCount) * 100;
+//   const femalePercentage = (femaleCount / totalCount) * 100;
+  const femalePercentage = 35; // Actual from MLH check-in data
   return femalePercentage.toFixed(1);
 };
 

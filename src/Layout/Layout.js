@@ -11,6 +11,7 @@ import {
   UniversityStat,
   CountryStats
 } from '../Stats/Stats';
+
 import { Footer } from './Footer';
 import { Navbar } from './Navbar';
 
@@ -29,9 +30,11 @@ export function Layout() {
             <TotalNum />
             <div className="row">
               <div className="col-lg-6 col-md-12">
+               
                 <RaceChart />
               </div>
               <div className="col-lg-6 col-md-12">
+                
                 <EducationLevelChart />
               </div>
             </div>

@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 import { useDownloadCanvas } from '../Providers/DownloadProvider';
 import { useStats } from '../Providers/StatsProvider';
 import { buildRaceChart, buildEducationLevelChart } from './charts';
-
+import { RaceLegend, EducationLegend } from '../Layout/ChartLegend';
 export function TotalNum() {
   const { stats: { count } } = useStats();
   return <h2 className="text-left">
@@ -22,6 +22,7 @@ export function RaceChart() {
 
   return <div className="nes-container with-title is-dark is-centered stats-container">
     <p class="title">Ethnicities</p>
+    <RaceLegend />
     <canvas id={id} width="100%"  height="100%"/>
     <button
       type="button"
@@ -42,6 +43,7 @@ export function EducationLevelChart() {
 
   return <div className="nes-container with-title is-dark is-centered stats-container">
     <p class="title">Education Levels</p>
+    <EducationLegend />
     <canvas id={id} width="100%" height="100%" />
     <button
       type="button"

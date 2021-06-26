@@ -8,6 +8,7 @@ import './App.css';
 
 function App() {
   Chart.defaults.global.defaultFontFamily = "'Press Start 2P'";
+  Chart.defaults.global.defaultFontSize   = 8;
 
   return (
     <div className="App">

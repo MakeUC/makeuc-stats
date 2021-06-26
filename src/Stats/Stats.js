@@ -22,7 +22,7 @@ export function RaceChart() {
 
   return <div className="nes-container with-title is-dark is-centered stats-container">
     <p class="title">Ethnicities</p>
-    <canvas id={id} width="200" height="200" />
+    <canvas id={id} width="100%"  height="100%"/>
     <button
       type="button"
       className="nes-btn btn-primary-new mt-2"
@@ -42,7 +42,7 @@ export function EducationLevelChart() {
 
   return <div className="nes-container with-title is-dark is-centered stats-container">
     <p class="title">Education Levels</p>
-    <canvas id={id} width="200" height="200" />
+    <canvas id={id} width="100%" height="100%" />
     <button
       type="button"
       className="nes-btn btn-primary-new mt-2"

@@ -57,3 +57,24 @@
   background-color: #fccf00;
   color: #927700;
 }
+
+#race-chart{
+  font-size: 2vw;
+}
+
+#edu-level-chart{
+  font-size: 2vw;
+}
+
+button{
+  font-size:x-small;
+}
+
+.devpost-btn{
+  font-size:x-small;
+}
+
+footer > div > p{
+  font-size: initial;
+}
+

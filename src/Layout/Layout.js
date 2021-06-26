@@ -49,7 +49,7 @@ export function Layout() {
             </div>
           </div>
 
-          <div className="row text-center">
+          <div className="row text-center" >
               <a href="https://makeuc-2020.devpost.com/" className="nes-btn btn-primary-new mt-2 devpost-btn" style={{margin: '0 auto'}}>PAST PROJECTS </a>
           </div>
         </>

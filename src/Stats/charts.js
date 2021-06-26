@@ -20,8 +20,10 @@ export function buildRaceChart(ctx, ethnicities) {
       }]
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: true,
       legend: {
-        // display: false
+        display: false
       },
       plugins: {
         labels: {
@@ -54,7 +56,8 @@ export function buildEducationLevelChart(ctx, educationLevels) {
           fontColor: `black`,
           overlap: false
         }
-      }
+      },
+      legend: {display: false},
     }
   });
 }

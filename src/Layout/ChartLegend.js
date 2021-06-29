@@ -17,8 +17,11 @@ export function RaceLegend(){
                         African American
                         </div>
                     <div id="legend5">
-                        Hispanic or Latino
+                        Hispanic / Latino
                         </div>
+                    <div id="legend7">
+                        American Indian / Alaskan Native
+                    </div>
                     <div id="legend6">
                         Other
                         </div>

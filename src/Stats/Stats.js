@@ -41,10 +41,10 @@ export function EducationLevelChart() {
     buildEducationLevelChart(ctx, educationLevels);
   }, [ id, educationLevels ]);
 
-  return <div className="nes-container with-title is-dark is-centered stats-container">
+  return <div className="nes-container with-title is-dark is-centered stats-container" style={{height: 96 +'%'}}>
     <p class="title">Education Levels</p>
     <EducationLegend />
-    <canvas id={id} width="100%" height="100%" />
+    <canvas id={id} width="100%" height="100%" style={{'margin-bottom': 9+'%'}} />
     <button
       type="button"
       className="nes-btn btn-primary-new mt-2"

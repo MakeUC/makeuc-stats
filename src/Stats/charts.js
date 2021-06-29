@@ -8,6 +8,8 @@ const backgroundColor = [
   `#ff8304`, `#3b1f86`, `#2121de`, `#f8cd00`, `#ff36ab`, `#92cc41`, `#209cee`
 ];
 
+
+
 export function buildRaceChart(ctx, ethnicities) {
   return new Chart(ctx, {
     type: 'pie',
@@ -25,9 +27,19 @@ export function buildRaceChart(ctx, ethnicities) {
       legend: {
         display: false
       },
+      //changes the text within the tooltip
+      tooltips: {
+        callbacks:{
+          label: (item,data) => {
+            let percentage =  ((data.datasets[0].data[item.index] / data.datasets[0]._meta[0].total)*100).toFixed(2) ;
+            return  `${data.labels[item.index]}: ${percentage}%`; 
+          }
+        }
+      },
       plugins: {
         labels: {
-          render: a => `${a.label}: ${a.percentage}%`,
+          //render: a => `${a.label}: ${a.percentage}%`,
+          render: a => ``,
           fontColor: `black`,
           showActualPercentages: true,
           position: `border`,
@@ -50,11 +62,23 @@ export function buildEducationLevelChart(ctx, educationLevels) {
       }]
     },
     options: {
+      tooltips: {
+        callbacks:{
+          label: (item,data) => {
+            let percentage =  ((data.datasets[0].data[item.index] / data.datasets[0]._meta[1].total)*100).toFixed(2) ;
+            return  `${data.labels[item.index]}: ${percentage}%`;
+          }
+        }
+      },
       plugins: {
         labels: {
-          render: a => `${a.label}: ${a.percentage}%`,
+          //render: a => `${a.label}: ${a.percentage}%`,
+          render: a => "",
           fontColor: `black`,
           overlap: false
+        },
+        tooltips: {
+          render: a=> `${a.label}: ${a.percentage}%`,
         }
       },
       legend: {display: false},

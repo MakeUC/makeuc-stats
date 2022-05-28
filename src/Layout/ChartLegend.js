@@ -41,7 +41,7 @@ export function EducationLegend(){
                       High School
                       </div>
                   <div id="legend3">
-                      PhD
+                      Doctorate
                       </div>
                   <div id="legend5">
                       Associates

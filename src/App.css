@@ -1,87 +1,6 @@
-
-
-.navbar-brand img {
-  width: 120px;
-  height: 60px;
-}
-
-.nes-container.main-container {
-  margin: 5rem 3rem 3rem 3rem;
-  padding: 3rem 10rem;
-}
-
-.nes-container.is-dark {
-  background-color: black;
-}
-
-.nes-container.is-dark.with-title>.title {
-  background-color: black;
-  margin-top: -4.2rem;
-  font-size: 1.5rem;
-}
-
-.nes-container.stats-container {
-  padding: 3rem 4rem 1rem 4rem;
-  margin-top: 2rem;
-}
-
-@media (min-width: 992px) {
-  .nes-container.main-container {
-    margin: 5rem 1rem 1rem 1rem;
-    padding: 1rem 5rem;
-  }
-}
-
-
-.bg-primary-new {
-  background-color: #ff8304;
-}
-
-.btn-primary-new {
-  background-color: #ff8304;
-  color: #fff;
-  border-color: #3b1f86;
-  margin-top: 10px;
-}
-
-.btn-primary-new:hover {
-  background-color: #fccf00;
-  color: #927700;
-}
-
-#race-chart{
-  font-size: 2vw;
-}
-
-#edu-level-chart{
-  font-size: 2vw;
-}
-
-button{
-  font-size:x-small;
-}
-
-.devpost-btn{
-  font-size:x-small;
-}
-
-footer > div > p{
-  font-size: initial;
-}
-
-@media (max-width: 500px) {
-  * {
-    font-size: 0.6em;
-  }
-  .nes-container.main-container {
-    margin: 3rem 1rem 1rem 1rem;
-    padding: 1rem;
-  }
-
 .RaceLegend{
   width: 100%;
   padding:0% 1% 0% 1%;
-  font-size: 35em;
   margin-bottom: 1%;
   padding-top: 10%;
 }
@@ -89,21 +8,9 @@ footer > div > p{
 .EducationLegend{
   width: 100%;
   padding:15% 1% 0% 1%;
-  font-size: 35em;
   margin-bottom: 1%;
   padding-top: 10%;
 }
-
-}
-
-@media screen and (min-width: 501px) and (max-width: 985px)
-{
-  * {
-    width:100%;
-    margin-left: -2%;
-  }
-}
-
 
 .RaceLegend{
   width: 100%;

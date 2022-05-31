@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import LogoImage from '../assets/logo_2022.png';
+
 export function Navbar() {
   return(
     <Nav>
       <Logo href="https://stats.makeuc.io">
-        <img src="https://github.com/MakeUC/makeuc-stats/blob/nishil-dev-2022/public/logo_2022.png?raw=true" alt="MakeUC"/>
+        <img src={LogoImage} alt="MakeUC"/>
       </Logo>
       <MakeUCButton href="https://makeuc.io/">Main Website</MakeUCButton>
     </Nav>
@@ -19,7 +21,7 @@ const Nav = styled.nav`
   left: 0;
   right: 0;
   height: 70px;
-  background-color: #090b13;
+  background-color: #363636;
   display: flex;
   justify-content: space-between;
   align-items: center;

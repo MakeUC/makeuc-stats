@@ -1,14 +1,24 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { createContext, useContext, useState, useEffect, ReactNode, FC } from 'react';
+import axios, { AxiosError } from 'axios';
 
 const defaultStats = { count: 0, ethnicities: {}, educationLevels: {}, femalesPercent: 0, universityCount: 0, countryCount: 0 };
 
-const context = createContext({ stats: defaultStats, isLoading: true, error: null });
+type StatsProviderContext = {
+  stats: typeof defaultStats;
+  isLoading: boolean;
+  error?: AxiosError;
+};
 
-export function StatsProvider({ children }) {
+const context = createContext<StatsProviderContext>({ stats: defaultStats, isLoading: true, error: undefined });
+
+export type StatsProviderProps = {
+  children: ReactNode;
+}
+
+export const StatsProvider: FC<StatsProviderProps> = ({ children }) => {
   const [ stats, setStats ] = useState(defaultStats);
   const [ isLoading, setLoading ] = useState(true);
-  const [ error, setError ] = useState(null);
+  const [ error, setError ] = useState<AxiosError>();
 
   useEffect(() => {
     (async function() {
@@ -25,7 +35,7 @@ export function StatsProvider({ children }) {
 
         setStats(res.data.stats);
       } catch(err) {
-        setError(err);
+        setError(err as AxiosError);
       } finally {
         setLoading(false);
       }

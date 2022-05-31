@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Montserrat;
+  src: local('Montserrat'), url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   font-family: none;
@@ -5,6 +10,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 56px;
   background-color: #363636;
+  font-family: Montserrat;
+  background-image: url(./assets/background.png);
+  background-size: cover;
 }
 
 code {

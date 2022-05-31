@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import 'bootstrap/dist/css/bootstrap.css';
-import 'nes.css/css/nes.min.css';
+import './assets/fonts/Montserrat-Italic-VariableFont_wght.ttf'
+import './assets/fonts/Montserrat-VariableFont_wght.ttf'
 import './index.css';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

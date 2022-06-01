@@ -53,8 +53,12 @@ export const SponsorGroupContainer = styled.div`
         border-top: 2px solid #034732;
     }
 
-    > * {
+    > * > img {
         background-color: #fff;
+        padding: 0.5em;
+        height: 50px;
+        margin: 0.25em;
+        max-width: 75%;
     }
 
     > * + * {

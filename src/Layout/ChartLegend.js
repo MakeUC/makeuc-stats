@@ -4,16 +4,16 @@ import '../App.css';
 
 export function RaceLegend() {
     return <div className="Legend">
-        <div id="legend1">
+        <div id="legend2">
             Asian
         </div>
-        <div id="legend2">
+        <div id="legend1">
             White
         </div>
-        <div id="legend3">
+        <div id="legend4">
             Prefer not to answer
         </div>
-        <div id="legend4">
+        <div id="legend6">
             African American
         </div>
         <div id="legend5">
@@ -22,7 +22,7 @@ export function RaceLegend() {
         <div id="legend7">
             American Indian / Alaskan Native
         </div>
-        <div id="legend6">
+        <div id="legend3">
             Other
         </div>
 
@@ -31,10 +31,10 @@ export function RaceLegend() {
 
 export function EducationLegend() {
     return <div className="Legend">
-        <div id="legend2">
+        <div id="legend1">
             Bachelor's
         </div>
-        <div id="legend1">
+        <div id="legend2">
             Master's
         </div>
         <div id="legend6">

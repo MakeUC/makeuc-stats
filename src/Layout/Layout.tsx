@@ -31,8 +31,16 @@ export function Layout() {
         isLoading ? <h2 className="my-5">Loading...</h2> :
           error ? <h2 className="my-5">Error loading stats: {error.message}</h2> :
             <>
-              <Container className="mt-3">
+              <Container className="mt-3 text-center">
                 <TotalNum />
+              </Container>
+
+              <Container className="mt-3">
+                <NumberedStats>
+                  <FemalesStat />
+                  <UniversityStat />
+                  <CountryStats />
+                </NumberedStats>
               </Container>
 
               <TwoColumn className="mt-3">
@@ -46,20 +54,8 @@ export function Layout() {
               </TwoColumn>
 
               <Container className="mt-3">
-                <NumberedStats>
-                  <FemalesStat />
-                  <UniversityStat />
-                  <CountryStats />
-                </NumberedStats>
-              </Container>
-
-              <Container className="mt-3">
                 <SponsorSection />
               </Container>
-
-              <div className="row text-center" >
-                <a href="https://makeuc-2020.devpost.com/" className="btn-primary-new mt-2 devpost-btn" style={{ margin: '0 auto' }}>PAST PROJECTS </a>
-              </div>
             </>
       }
     </MainContainer>

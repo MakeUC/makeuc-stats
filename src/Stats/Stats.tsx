@@ -29,7 +29,7 @@ export function RaceChart() {
     <RaceLegend />
     <canvas id={id} width="100%" height="100%" />
     <DownloadButton
-      onClick={() => download(id, `MakeUC 2020 Ethnicity Chart`)}
+      onClick={() => download(id, `MakeUC 2021 Ethnicity Chart`)}
     >Download</DownloadButton>
   </GraphContainer>;
 }
@@ -49,7 +49,7 @@ export function EducationLevelChart() {
     <EducationLegend />
     <canvas id={id} width="100%" height="100%" />
     <DownloadButton
-      onClick={() => download(id, `MakeUC 2020 Education Level Chart`)}
+      onClick={() => download(id, `MakeUC 2021 Education Level Chart`)}
     >Download</DownloadButton>
   </GraphContainer>;
 }

@@ -9,6 +9,11 @@ export const Container = styled.div`
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;
 
+export const WhiteContainer = styled(Container)`
+    background-color: #fff;
+    color: #126F52;
+`;
+
 export const LinkButton = styled.a`
     background-color: #126F52;
     border: 2px solid #034732;
@@ -41,4 +46,4 @@ export const Button = styled.button`
         background-color: #8B728E;
         border-color: #694873;
     }
-`
+`;

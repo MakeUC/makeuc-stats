@@ -15,7 +15,7 @@ import SponsorSection from '../Stats/Sponsors';
 
 import { Footer } from './Footer';
 import { Navbar } from './Navbar';
-import { Container } from '../Components/LayoutComponents';
+import { Container, WhiteContainer } from '../Components/LayoutComponents';
 import { MainContainer, NumberedStats, TwoColumn } from './StyledComponents';
 
 
@@ -53,9 +53,9 @@ export function Layout() {
                 </Container>
               </TwoColumn>
 
-              <Container className="mt-3">
+              <WhiteContainer className="mt-3">
                 <SponsorSection />
-              </Container>
+              </WhiteContainer>
             </>
       }
     </MainContainer>

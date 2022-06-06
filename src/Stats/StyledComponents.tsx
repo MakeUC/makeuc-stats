@@ -9,7 +9,7 @@ export const StatText = styled.h4`
 `
 
 export const GraphTitle = styled.h3`
-    marign: 0;
+    margin: 0;
 `
 
 export const GraphContainer = styled.div`

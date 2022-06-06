@@ -1,6 +1,4 @@
-import React from 'react';
-import Chart from 'chart.js';
-import { DownloadProvider } from './Providers/DownloadProvider.tsx';
+import { DownloadProvider } from './Providers/DownloadProvider';
 import { StatsProvider } from './Providers/StatsProvider';
 import { Layout } from './Layout/Layout';
 

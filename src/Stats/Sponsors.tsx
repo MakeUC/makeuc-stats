@@ -1,4 +1,4 @@
-import { FC, lazy, useEffect, useMemo, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { GraphTitle, SponsorGroupContainer, SponsorSectionContainer } from './StyledComponents';
 
 const sponsors = [

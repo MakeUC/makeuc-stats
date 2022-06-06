@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import CountUp from 'react-countup';
 import { useDownloadCanvas } from '../Providers/DownloadProvider';
 import { useStats } from '../Providers/StatsProvider';
 import { buildRaceChart, buildEducationLevelChart } from './charts';
-import { RaceLegend, EducationLegend } from '../Layout/ChartLegend';
+import { Legend } from '../Layout/ChartLegend';
 
 import { DownloadButton, GraphContainer, GraphTitle, StatText, TotalRegistrantText } from './StyledComponents';
 
@@ -19,18 +19,24 @@ export function RaceChart() {
   const { download } = useDownloadCanvas();
   const id = `race-chart`;
 
+  const [chart, setChart] = useState<Chart>();
+
   useEffect(() => {
     const ctx = document.getElementById(id);
-    buildRaceChart(ctx, ethnicities);
+    setChart(buildRaceChart(ctx as HTMLCanvasElement, ethnicities));
   }, [id, ethnicities]);
 
   return <GraphContainer>
-    <GraphTitle>Ethnicities</GraphTitle>
-    <RaceLegend />
-    <canvas id={id} width="100%" height="100%" />
-    <DownloadButton
-      onClick={() => download(id, `MakeUC 2021 Ethnicity Chart`)}
-    >Download</DownloadButton>
+    <div>
+      <GraphTitle>Ethnicities</GraphTitle>
+      <Legend chart={chart} />
+    </div>
+    <div>
+      <canvas id={id} width="100%" height="100%" />
+      <DownloadButton
+        onClick={() => download(id, `MakeUC 2021 Ethnicity Chart`)}
+      >Download</DownloadButton>
+    </div>
   </GraphContainer>;
 }
 
@@ -39,18 +45,24 @@ export function EducationLevelChart() {
   const { download } = useDownloadCanvas();
   const id = `edu-level-chart`;
 
+  const [chart, setChart] = useState<Chart>();
+
   useEffect(() => {
     const ctx = document.getElementById(id);
-    buildEducationLevelChart(ctx, educationLevels);
+    setChart(buildEducationLevelChart(ctx as HTMLCanvasElement, educationLevels));
   }, [id, educationLevels]);
 
   return <GraphContainer>
-    <GraphTitle>Education Levels</GraphTitle>
-    <EducationLegend />
-    <canvas id={id} width="100%" height="100%" />
-    <DownloadButton
-      onClick={() => download(id, `MakeUC 2021 Education Level Chart`)}
-    >Download</DownloadButton>
+    <div>
+      <GraphTitle>Education Levels</GraphTitle>
+      <Legend chart={chart} />
+    </div>
+    <div>
+      <canvas id={id} width="100%" height="100%" />
+      <DownloadButton
+        onClick={() => download(id, `MakeUC 2021 Education Level Chart`)}
+      >Download</DownloadButton>
+    </div>
   </GraphContainer>;
 }
 export function FemalesStat() {

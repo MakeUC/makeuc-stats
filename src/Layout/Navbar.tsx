@@ -21,8 +21,8 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
-  background-color: #363636;
+  height: 85px;
+  background-color: #212121;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,9 +32,9 @@ const Nav = styled.nav`
 
 const Logo = styled.a`
   padding: 0;
-  width: 80px;
+  width: 140px;
   margin-top: 4px;
-  max-height: 70px;
+  max-height: 200px;
   font-size: 0;
   display: inline-block;
 

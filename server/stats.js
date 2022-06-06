@@ -35,7 +35,7 @@ exports.getFemalesPercent = attendees => {
   const totalCount = attendees.length;
 //   const femalePercentage = (femaleCount / totalCount) * 100;
   const femalePercentage = 35; // Actual from MLH check-in data
-  return femalePercentage.toFixed(1);
+  return femalePercentage;
 };
 
 exports.getUniversityCount = attendees => {

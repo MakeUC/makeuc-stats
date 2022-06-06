@@ -31,7 +31,7 @@ export function Layout() {
         isLoading ? <h2 className="my-5">Loading...</h2> :
           error ? <h2 className="my-5">Error loading stats: {error.message}</h2> :
             <>
-              <Container className="mt-3 text-center">
+              <Container className="mt-4 text-center">
                 <TotalNum />
               </Container>
 
@@ -44,13 +44,13 @@ export function Layout() {
               </Container>
 
               <TwoColumn className="mt-3">
-                <Container>
+                <WhiteContainer>
                   <RaceChart />
-                </Container>
+                </WhiteContainer>
 
-                <Container>
+                <WhiteContainer>
                   <EducationLevelChart />
-                </Container>
+                </WhiteContainer>
               </TwoColumn>
 
               <WhiteContainer className="mt-3">

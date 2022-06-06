@@ -17,6 +17,20 @@ export const GraphContainer = styled.div`
     flex-direction: column;
     align-items: center;
     align-content: center;
+    justify-content: space-between;
+    height: 100%;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
+
+    :nth-child(2) {
+        height: 100%;
+    }
 `
 
 export const DownloadButton = styled.button`

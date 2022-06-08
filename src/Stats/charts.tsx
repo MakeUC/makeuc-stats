@@ -5,7 +5,7 @@ Chart.defaults.global.defaultFontFamily = `'Montserrat', 'Lato', -apple-system, 
 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'`;
 
 const backgroundColor = [
-  `#6247AA`, `#7251B5`, `#815AC0`, `#9163CB`, `#A06CD5`, `#B185DB`, `#C19EE0`, `#D2B7E5`, `#DAC3E8`
+  `#034732`, `#126F52`, `#694873`, `#8B728E`, `#363636`, `#5C5C5C`, `#594237`, `#DBAB65`
 ];
 
 const chartOptions = {

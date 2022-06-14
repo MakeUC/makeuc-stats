@@ -5,7 +5,7 @@ import { useStats } from '../Providers/StatsProvider';
 import { buildRaceChart, buildEducationLevelChart } from './charts';
 import { Legend } from '../Layout/ChartLegend';
 
-import { DownloadButton, GraphContainer, GraphTitle, StatText, TotalRegistrantText } from './StyledComponents';
+import { DownloadButton, GraphContainer, GraphTitle, StatText, TotalRegistrantText, CanvasContainer } from './StyledComponents';
 
 export function TotalNum() {
   const { stats: { count } } = useStats();
@@ -32,9 +32,9 @@ export function RaceChart() {
       <GraphTitle>Ethnicities</GraphTitle>
       <Legend chart={chart} />
     </div>
-    <div>
+    <CanvasContainer>
       <canvas id={id} width="100%" height="100%" />
-    </div>
+    </CanvasContainer>
     <DownloadButton
     onClick={() => download(downloadId, `MakeUC 2021 Ethnicity Chart`)}
     >Download</DownloadButton>
@@ -59,9 +59,9 @@ export function EducationLevelChart() {
       <GraphTitle>Education Levels</GraphTitle>
       <Legend chart={chart} />
     </div>
-    <div>
+    <CanvasContainer>
       <canvas id={id} width="100%" height="100%" />
-    </div>
+    </CanvasContainer>
     <DownloadButton
     onClick={() => download(downloadId, `MakeUC 2021 Education Level Chart`)}
     >Download</DownloadButton>

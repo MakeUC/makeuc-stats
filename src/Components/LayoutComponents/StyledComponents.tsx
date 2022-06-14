@@ -12,6 +12,8 @@ export const Container = styled.div`
 export const WhiteContainer = styled(Container)`
     background-color: #fff;
     color: #126F52;
+    width: 100%;
+    height: auto;
 `;
 
 export const LinkButton = styled.a`

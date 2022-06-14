@@ -20,18 +20,28 @@ export const GraphContainer = styled.div`
     justify-content: space-between;
     height: 100%;
 
-    div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        width: 100%;
-    }
+    // div {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     align-content: center;
+    //     width: 100%;
+    //     // height: 100%;
+    // }
 
     :nth-child(2) {
         height: 100%;
     }
 `
+
+export const CanvasContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    height: 100%;
+` 
 
 export const DownloadButton = styled.button`
     background-color: #126F52;

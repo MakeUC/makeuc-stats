@@ -10,6 +10,7 @@ export const StatText = styled.h4`
 
 export const GraphTitle = styled.h3`
     margin: 0;
+    text-align: center;
 `
 
 export const GraphContainer = styled.div`

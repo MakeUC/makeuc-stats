@@ -60,7 +60,7 @@ export function EducationLevelChart() {
       <Legend chart={chart} />
     </div>
     <CanvasContainer>
-      <canvas id={id} width="80%" height="100%" />
+      <canvas id={id} width="100%" height="100%" />
     </CanvasContainer>
     <DownloadButton
     onClick={() => download(downloadId, `MakeUC 2021 Education Level Chart`)}

@@ -40,6 +40,7 @@ export const CanvasContainer = styled.div`
     flex-direction: column;
     align-items: center;
     align-content: center;
+    justify-content: flex-end;
     width: 50%;
     height: 100%;
 ` 
